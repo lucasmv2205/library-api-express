@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-mongoose.connect("mongodb+srv://lucas:123@livros.5d1f4nk.mongodb.net")
+mongoose.connect(`${process.env.MONGO_API_KEY}`)
 
 let db = mongoose.connection;
 
