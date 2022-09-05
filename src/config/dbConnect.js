@@ -1,6 +1,11 @@
 import mongoose from 'mongoose'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
-mongoose.connect(`${process.env.MONGO_API_KEY}`)
+const api_key = process.env.MONGO_API_KEY
+console.log(api_key);
+
+mongoose.connect(`${api_key}`)
 
 let db = mongoose.connection;
 
